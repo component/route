@@ -1,5 +1,5 @@
 {
-  "name": "route",
+  "name": "route-component",
   "repo": "component/route",
   "description": "Route implementation for client-side routers",
   "version": "0.0.1",
