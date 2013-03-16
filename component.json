@@ -2,7 +2,7 @@
   "name": "route",
   "repo": "component/route",
   "description": "Route implementation for client-side routers",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "keywords": ["route", "router", "routing"],
   "dependencies": {
     "component/path-to-regexp": "*"
