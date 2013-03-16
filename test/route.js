@@ -41,4 +41,11 @@ describe('Route#matches(path)', function(){
     var ret = route.match('/user/tj%20holowaychuk');
     assert('tj holowaychuk' == ret.name);
   })
+
+  it('should populate .args array', function(){
+    var route = new Route('/user/:id/files/*');
+    var ret = route.match('/user/4/files/js/jquery.js');
+    assert('4' == ret.args[0]);
+    assert('js/jquery.js' == ret.args[1]);
+  })
 })

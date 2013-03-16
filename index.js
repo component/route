@@ -54,10 +54,10 @@ Route.prototype.teardown = function(fn){
 
 /**
  * Check if `path` matches this route,
- * returning `false` or an array of matches.
+ * returning `false` or an object.
  *
  * @param {String} path
- * @return {Array}
+ * @return {Object}
  * @api public
  */
 
@@ -66,7 +66,8 @@ Route.prototype.match = function(path){
   var qsIndex = path.indexOf('?');
   var pathname = ~qsIndex ? path.slice(0, qsIndex) : path;
   var m = this.regexp.exec(pathname);
-  var obj = [];
+  var params = [];
+  var args = [];
 
   if (!m) return false;
 
@@ -78,13 +79,16 @@ Route.prototype.match = function(path){
       : m[i];
 
     if (key) {
-      obj[key.name] = undefined !== obj[key.name]
-        ? obj[key.name]
+      params[key.name] = undefined !== params[key.name]
+        ? params[key.name]
         : val;
     } else {
-      obj.push(val);
+      params.push(val);
     }
+
+    args.push(val);
   }
 
-  return obj;
+  params.args = args;
+  return params;
 };
