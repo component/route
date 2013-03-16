@@ -1,0 +1,15 @@
+{
+  "name": "route",
+  "repo": "component/route",
+  "description": "Route implementation for client-side routers",
+  "version": "0.0.1",
+  "keywords": ["route", "router", "routing"],
+  "dependencies": {
+    "component/path-to-regexp": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
