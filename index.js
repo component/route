@@ -23,32 +23,33 @@ function Route(path) {
   this.path = path;
   this.keys = [];
   this.regexp = toRegexp(path, this.keys);
-  this.callbacks = {};
+  this._before = [];
+  this._after = [];
 }
 
 /**
- * Assign setup `fn`.
+ * Add before `fn`.
  *
  * @param {Function} fn
  * @return {Route} self
  * @api public
  */
 
-Route.prototype.setup = function(fn){
-  this.callbacks.setup = fn;
+Route.prototype.before = function(fn){
+  this._before.push(fn);
   return this;
 };
 
 /**
- * Assign teardown `fn`.
+ * Add after `fn`.
  *
  * @param {Function} fn
  * @return {Route} self
  * @api public
  */
 
-Route.prototype.teardown = function(fn){
-  this.callbacks.teardown = fn;
+Route.prototype.after = function(fn){
+  this._after.push(fn);
   return this;
 };
 
