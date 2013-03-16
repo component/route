@@ -24,6 +24,10 @@
   an alternate "page" is shown. This may be invoked
   any number of times.
 
+### Route#call(type, ...)
+
+  Invoke callbacks of `type` with N arguments.
+
 ### Route#match(path)
 
   Match against the given `path`. Returns `false` or

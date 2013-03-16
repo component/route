@@ -54,6 +54,23 @@ Route.prototype.after = function(fn){
 };
 
 /**
+ * Invoke callbacks for `type` with N args.
+ *
+ * @param {String} type
+ * @param {Mixed} ...
+ * @api public
+ */
+
+Route.prototype.call = function(type){
+  var fns = this['_' + type];
+  if (!fns) throw new Error('invalid type');
+  var args = [].slice.call(arguments, 1);
+  for (var i = 0; i < fns.length; i++) {
+    fns[i].apply(null, args);
+  }
+};
+
+/**
  * Check if `path` matches this route,
  * returning `false` or an object.
  *
