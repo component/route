@@ -50,7 +50,7 @@ describe('Route#matches(path)', function(){
   })
 })
 
-describe('Route#call(type, ...)', function(){
+describe('Route#call(type, args)', function(){
   it('should invoke callbacks', function(done){
     var route = new Route('/user/:id');
     var calls = [];
@@ -69,6 +69,6 @@ describe('Route#call(type, ...)', function(){
       done();
     });
 
-    route.call('before', '5');
+    route.call('before', ['5']);
   })
 })

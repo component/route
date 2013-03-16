@@ -24,9 +24,9 @@
   an alternate "page" is shown. This may be invoked
   any number of times.
 
-### Route#call(type, ...)
+### Route#call(type, [args])
 
-  Invoke callbacks of `type` with N arguments.
+  Invoke callbacks of `type` with `args` array.
 
 ### Route#match(path)
 
