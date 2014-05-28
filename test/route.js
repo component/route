@@ -15,7 +15,7 @@ describe('Route#matches(path)', function(){
   })
 
   it('should support wildcards', function(){
-    var route = new Route('/file/*');
+    var route = new Route('/file/(.*)');
     var ret = route.match('/file/js/jquery.js');
     assert('js/jquery.js' == ret[0]);
   })
@@ -43,7 +43,7 @@ describe('Route#matches(path)', function(){
   })
 
   it('should populate .args array', function(){
-    var route = new Route('/user/:id/files/*');
+    var route = new Route('/user/:id/files/(.*)');
     var ret = route.match('/user/4/files/js/jquery.js');
     assert('4' == ret.args[0]);
     assert('js/jquery.js' == ret.args[1]);
