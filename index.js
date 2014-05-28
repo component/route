@@ -97,8 +97,8 @@ Route.prototype.match = function(path){
       : m[i];
 
     if (key) {
-      params[key.name] = undefined !== params[key.name]
-        ? params[key.name]
+      params[key] = undefined !== params[key]
+        ? params[key]
         : val;
     } else {
       params.push(val);
