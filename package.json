@@ -1,15 +1,15 @@
 {
   "name": "route-component",
-  "repo": "component/route",
+  "repo": "duncaen/route",
   "description": "Route implementation for client-side routers",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "keywords": [
     "route",
     "router",
     "routing"
   ],
   "dependencies": {
-    "path-to-regexp": "0.0.2"
+    "path-to-regexp": "0.1.2"
   },
   "devDependencies": {
     "mocha": "*",
@@ -21,6 +21,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/component/route.git"
+    "url": "https://github.com/duncaen/route.git"
   }
 }
