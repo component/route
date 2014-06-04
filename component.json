@@ -9,7 +9,7 @@
     "routing"
   ],
   "dependencies": {
-    "component/path-to-regexp": "*"
+    "component/path-to-regexp": "^v0.1.2"
   },
   "development": {},
   "license": "MIT",
