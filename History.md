@@ -1,4 +1,12 @@
 
+n.n.n / 2014-09-09
+==================
+
+  * fix tests with wildcards
+  * update path-to-regexp
+  * Merge pull request #1 from repoify/add/repository
+  * add repository field to readme
+
 0.2.0 / 2013-03-16 
 ==================
 
