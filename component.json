@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "keywords": ["route", "router", "routing"],
   "dependencies": {
-    "component/path-to-regexp": "*"
+    "pillarjs/path-to-regexp": "*"
   },
   "development": {},
   "license": "MIT",

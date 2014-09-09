@@ -9,7 +9,7 @@
     "routing"
   ],
   "dependencies": {
-    "path-to-regexp": "0.0.2"
+    "path-to-regexp": "1.0.1"
   },
   "devDependencies": {
     "mocha": "*",
